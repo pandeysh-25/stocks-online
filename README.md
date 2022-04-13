@@ -1,5 +1,6 @@
-# stocks-online
-Python + Django stocks trading platform
+# StocksOnline
+
+A Python + Django stocks trading platform
 
 
   
@@ -10,5 +11,12 @@ This firm assists first-time  clients who use the firm as a gateway into stock t
 The firm database stores information about every transaction done by any certain consumer, containing details of the transaction, the stocks involved, bought or sold, date of transaction and other details. We use this to provide users with a look at their portfolio every time they log in. The firm also offers facilities for a customer  to add money into their account. 
 The intention behind StocksOnline is to provide people with little to no knowledge about the stock market to be able to invest money and get returns.
 
-Python, Django and MySQL were used in this project
+Python, Django and MySQL were used in this project. 
 
+Flow diagram:
+
+![My animated logo](images/flowdiag.png)
+
+ER diagram:
+
+![My animated logo](images/erdiag.png)
