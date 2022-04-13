@@ -1,0 +1,124 @@
+<!--{% load staticfiles %} 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+--> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+-->
+{% load staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body{
+            background-image: url("{% static "signup/images/mainn.jpg" %}");
+            background-size: cover;
+        }
+        .login{
+            margin-top: 100px;
+    
+        }
+        .login.card{
+            background:grey;
+
+        }
+
+        .login.label{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            color:#ccc;
+
+        }
+
+    </style>
+    <title>The Market - StocksOnline|</title>
+</head> 
+<title>StocksOnline |</title>
+  <!--<style>
+    header{
+      background-color:darkslategrey;
+      background-size: cover;
+      background-position: center;
+      min-height: 1000px;
+    }
+    @media screen and (max-width: 670px){
+      header{
+        min-height: 500px;
+      }
+    }
+  </style>-->
+  
+</head>
+<body>
+  <header>
+    <nav class="black" role="navigation">
+      <div class="container">
+        <a href="/myhome/" class="brand-logo">StocksOnline</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i></a>
+        <a class='dropdown-trigger right' href='#' data-target='dropdown'>Settings</a>
+        
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/themarket/">The Market</a></li>
+          <li><a href="/buy/">Buy</a></li>
+          <li><a href="/listing/">List For Sale</a></li>
+        </ul>
+        <ul class="sidenav white-text" id="mobile-menu">
+          <li><a href="/themarket/" white-text>The Market</a></li>
+          <li><a href="/buy/" white-text>Buy</a></li>
+          <li><a href="/listing/" white-text>List For Sale</a></li>
+        </ul>
+        
+        <ul id='dropdown' class='dropdown-content hoverable'>
+          <li><a href="/topup/" class="black-text">Add StocksOnline Money</a></li>
+          <li><a href="/changepasswd/" class="black-text">Change Password</a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a href="/logout/" class="black-text">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+   <br>
+   <br>
+   <h2 class='header' style="color: white" align="center"> The Market </h3>
+    <br><br><br><br>
+    <table class="highlight responsive-table centered" width="90%">
+
+        <thead bgcolor="black">
+          <tr>
+              <th><font color="white">Company</font></th>
+              <th><font color="white">Listing</font></th>
+              <th><font color="white">Price</font></th>
+              <th><font color="white">Change</font></th>
+              <th><font color="white">Volatility</font></th>
+          </tr>
+        </thead>
+
+        <tbody bgcolor="#052069">
+          {% for i in a %}
+            <tr>
+	              <td><font color="white">{{i.symbol}}</font></td>
+                <td><font color="white">{{i.name}}</font></td>
+                <td><font color="white">{{i.last}}</font></td>
+                <td><font color="white">{{i.change}}</font></td>
+                <td><font color="white">{{i.change_percentage}}</font></td>
+                
+             </tr>
+          {% endfor %}
+  
+          
+        </tbody>
+      </table>
+      <br><br><br>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+$('.dropdown-trigger').dropdown();</script>
+
+</html>

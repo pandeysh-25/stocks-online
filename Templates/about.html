@@ -1,0 +1,130 @@
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    body{
+        background-image: url("{% static "signup/images/mainn.jpg" %}");
+        background-size: cover;
+    }
+    .login{
+        margin-top: 100px;
+    
+    }
+    .login.card{
+        background:grey;
+
+    }
+
+    .login.label{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        color:#ccc;
+
+    }
+
+</style>
+<title> Buy - StocksOnline|</title>
+<body>
+  <!-- navbar -->
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/home/" class="brand-logo left"  >StocksOnline</a>
+      <a href="/home/" class="sidenav-trigger right" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/signup/">Sign Up</a></li>
+            <li><a href="/login/">Login</a></li>
+            </ul>
+        
+        <ul class="sidenav white " id="mobile-menu">
+            <li><a href="/signup/">Sign Up</a></li>
+            <li><a href="/login/">Login</a></li>
+          
+        </ul>
+
+  </nav> 
+  
+
+
+  <div id="index-banner">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br>
+        
+
+
+
+        
+        <div class= "card-content">
+          <h2 class="header" style="color: white" >About us</h2>
+          <br>
+          <h6 class= "white-text">The world has rightfully become disillusioned with the stock market. The financial crisis of 2008, a direct product of Wall Street's self-indulgence
+            , was the moment we realized that change in the industry is necessary. Stock-brokers were strongly biased by their prior knowledge.</h6>
+            <h6 class="white-text">Lowest performance was found for inferences in which the problems caused a conflict between logical validity and the experts' belief. In these cases, the stock-brokers tended to make logically
+             invalid inferences rather than give up their existing beliefs. This led to the greatest economic crisis since the Great Depression of 1929.
+              However, very little suggests that these same stock-brokers have learnt their lessons.
+          </h6>
+          <h6 class="white-text">When you think of stock trading, you think of the wall street, the different stock exchanges of the world and of course "The Wolf of Wall Street". You
+               would think stock trading is too complicated and lets not forget the hassle with stockbrokers. But with StocksOnline you can enter the world of bulls 
+               and bears all by yourself i.e., without any brokers. Our interactive UI makes it easy for anyone to know what the stock market is about, especially 
+               for stock market newbies.  </h6>
+              <h6 class="white-text">Unlike all other stock-brokers, StocksOnline is completely <b>algorithm-based.</b> Using recent performance and volatility, it can help newcomers in taking their first
+                steps into the enthralling world of stock trading.Our users interact with other users to get deals done at a near-instantaneous rate through us. We also offer 
+                our users an option to purchase shares directly from the open market.</h6>
+              <h6 class="white-text">We also provide our users with the advantage of being able to purchase shares on the New York
+                    Stock Exchange, the NASDAQ, the Bombay Stock Exchange, and the EuroNext, among others.
+              </h6><br>
+                <br> 
+            <h6 class="white-text">So subscribe with us, its completely free and you can be the new wolf of the stock market. </h6>
+         
+        <br>
+        </div>
+        
+        
+        
+
+        </div>
+      </div>
+   
+    
+  </div> 
+  
+
+  <footer class="page-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">StocksOnline</h5>
+            <p class="grey-text text-lighten-4">A revolutionary stock trading firm.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2019 StocksOnline
+        </div>
+      </div>
+    </footer>
+        
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+      $('.materialboxed').materialbox();
+      $('.parallax').parallax();
+    });
+  </script>
+
+</body>
+</html>

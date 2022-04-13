@@ -1,0 +1,122 @@
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    body{
+        background-image: url("{% static "signup/images/mainn.jpg" %}");
+        background-size: cover;
+    }
+    .login{
+        margin-top: 100px;
+    
+    }
+    .login.card{
+        background:grey;
+
+    }
+
+    .login.label{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        color:#ccc;
+
+    }
+
+</style>
+<title> Buy - StocksOnline|</title>
+
+</head>
+<body>
+  <header>
+    <nav class="black" role="navigation">
+      <div class="container">
+        <a href="/myhome/" class="brand-logo">StocksOnline</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i></a>
+        <a class='dropdown-trigger right' href='#' data-target='dropdown'>Settings</a>
+        
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/themarket/">The Market</a></li>
+          <li><a href="/buy/">Buy</a></li>
+          <li><a href="/listing/">List For Sale</a></li>
+        </ul>
+        <ul class="sidenav white-text" id="mobile-menu">
+          <li><a href="/themarket/" white-text>The Market</a></li>
+          <li><a href="/buy/" white-text>Buy</a></li>
+          <li><a href="/listing/" white-text>List For Sale</a></li>
+        </ul>
+        
+        <ul id='dropdown' class='dropdown-content hoverable'>
+          <li><a href="/topup/" class="black-text">Add StocksOnline Money</a></li>
+          <li><a href="/changepasswd/" class="black-text">Change Password</a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a href="/logout/" class="black-text">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <form method="POST">
+        {%csrf_token%}
+    <br><br><br>
+    <p class="center" style="color:white">{{a}}</p>
+    <div class="row">
+        <div class="col s12 l4 offset-l4">
+            <div class="card">
+                <div class="card-action black white-text center-align">
+                    <h4> Buy Stocks </h4>
+                    
+                </div>  
+
+                <div class= "card-content">
+                    <div class="input-field col s12">
+                            <select name='option'>
+                              <option value="" selected>Select stock</option>
+                              <option value="Apple">Apple</option>
+                              <option value="Amazon">Amazon</option>
+                              <option value="Boeing Co">Boeing Co</option>
+                              <option value="Sensex">Sensex</option>
+                              <option value="Facebook">Facebook</option>
+                              <option value="Alphabet Inc">Alphabet Inc</option>
+                              <option value="Infosys">Infosys</option>
+                              <option value="Samsung">Samsung</option>
+                              <option value="Microsoft">Microsoft</option>
+                              <option value="NASDAQ">NASDAQ</option>
+                              <option value="Ferrari">Ferrari</option>
+                              <option value="TCS">TCS</option>
+                              <option value="Tesla">Tesla</option>
+                            </select>
+                            <label>Select Stock</label>
+                          </div>
+                          <br><br><br>
+
+                    <div class="form-field">
+                        <label for="num">No. of Stocks</label>
+                        <input type="number" name="num"></input>
+    
+                    </div>
+
+                    <br><br><br>
+                    <div class="form-field">
+                        <input type="submit" class="btn-small waves-effect waves-light grey-darken-3" value="Confirm" formaction="/buy/"></input>
+                        <input type="submit" class="btn-small waves-effect waves-light grey-darken-3" value="Cancel" formaction="/myhome/"></input>
+                    </div> 
+   
+
+        
+            </div>
+
+        </div>
+    </div>
+    </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+      $(document).ready(function(){
+    $('select').formSelect();
+    $('.dropdown-trigger').dropdown();
+  });
+</script>

@@ -1,0 +1,119 @@
+{% load staticfiles %} 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>StocksOnline-Stock Trading Redefined</title>
+  <style>
+    header{
+      background-color:darkslategrey;
+      background-size: cover;
+      background-position: center;
+      min-height: 1000px;
+    }
+    @media screen and (max-width: 670px){
+      header{
+        min-height: 500px;
+      }
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+    }
+  </style>
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo left"  >StocksOnline</a>
+      <a href="#" class="sidenav-trigger right" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/signup/">Sign Up</a></li>
+            <li><a href="/login/">Login</a></li>
+            </ul>
+        
+        <ul class="sidenav white " id="mobile-menu">
+            <li><a href="/signup/">|  Sign Up</a></li>
+            <li><a href="/login/">Login</a></li>
+          
+        </ul>
+
+  </nav> 
+  
+
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br><br><br>
+        
+
+
+
+        
+        <div class="row row-simplified center">
+          <h1 class="header" style="color: white"  >Stock trading.Redefined.</h1>
+
+          <h5 class= "white-text ">The stock market.No brokers.</h5>
+        </div>
+        
+        
+        
+
+        </div>
+      </div>
+   
+     <div class="parallax"><img src="{% static "signup/images/mainn.jpg" %}" alt="main"></div>
+  </div> 
+  
+
+   <footer class="page-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">StocksOnline</h5>
+            <p class="grey-text text-lighten-4">A revolutionary stock trading firm.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="/about/">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2019 StocksOnline
+        </div>
+      </div>
+    </footer>
+        
+  
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+      $('.materialboxed').materialbox();
+      $('.parallax').parallax();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body{
+            background-image: url("{% static "signup/images/mainn.jpg" %}");
+            background-size: cover;
+        }
+        .login{
+            margin-top: 100px;
+    
+        }
+        .login.card{
+            background:grey;
+
+        }
+
+        .login.label{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            color:#ccc;
+
+        }
+
+    </style>
+    <title>Login - StocksOnline|</title>
+</head>    
+<body>
+    <nav class="black" role="navigation">
+         <div class="nav-wrapper container center">
+            <a id="logo-container" href="../home/" class="brand-logo">StocksOnline</a>
+
+    </nav>
+    <br><br><br>
+    <div class="row">
+        <div class="col s12 l4 offset-l4">
+            <div class="card">
+                <div class="card-action black white-text center-align">
+                    <h4> Login </h4>
+                </div>
+                <form action="/login/" method ="POST">
+                        {% csrf_token %}
+
+                <div class= "card-content">
+                    <div class="form-field">
+                        <label for="username">Enter Username</label>
+                        <input type="text" maxlength=15 name="username"></input>
+
+                    </div>
+
+                    <div class="form-field">
+                            <label for="password">Enter Password</label>
+                            <input type="password" minlength=8 name="password"></input>
+    
+                    </div>
+
+                    <br><br><br>
+                    <div class="form-field center-align"  >
+                            <input type="submit" class="btn-large waves-effect waves-light grey-darken-3" value="sign in" ></input>
+
+                        </button>
+                    </div>
+
+                    <p align="center-align">{{a}}</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>                
+</body>
+</html>
+
+<

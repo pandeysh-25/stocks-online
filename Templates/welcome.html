@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <!--Import Google Icon Font-->
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <!-- Compiled and minified CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    
+
+        <title> Welcome - StocksOnline |</title>
+        <style>
+                body{
+                    background-image: url("{% static "signup/images/mainn.jpg" %}");
+                    background-size: cover;
+                }
+        </style>
+    </head>
+    <body>
+        <nav class="black" role="navigation">
+            <div class="nav-wrapper container center-align">
+              <a id="logo-container" href="../home/" class="brand-logo">StocksOnline</a>
+    
+    </nav>
+    <div class="row row-simplified center">
+        <h2 class="header center" style="color: white"> Welcome to StocksOnline </h2>
+
+    <br><br><br>
+    <div class="form-field center-align">
+            <a href="/login/" id="download-button"  class="btn-large waves-effect waves-light grey-darken-3"> Login here</a>
+            <a href="/stocks/" id="download-button"  class="btn-large waves-effect waves-light grey-darken-3"> Go to homepage</a>
+            <br><br><br>
+
+        </button>
+    </div>
+    </body>
+</html>

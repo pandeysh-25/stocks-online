@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<style>
+    body{
+        background-image: url("{% static "signup/images/mainn.jpg" %}");
+        background-size: cover;
+    }
+    .login{
+        margin-top: 100px;
+    
+    }
+    .login.card{
+        background:grey;
+
+    }
+
+    .login.label{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        color:#ccc;
+
+    }
+
+</style>
+<title> Sign Up - StocksOnline|</title>
+</head>
+<body>
+    <nav class="black" role="navigation">
+         <div class="nav-wrapper container center">
+             <a id="logo-container" href="../home/" class="brand-logo">StocksOnline</a>
+
+    </nav>
+    <form method="POST">
+        {%csrf_token%}
+    <br><br><br>
+    <div class="row">
+        <div class="col s12 l4 offset-l4">
+            <div class="card">
+                <div class="card-action black white-text center-align">
+                    <h4> Create an account </h4>
+                </div>  
+
+                <div class= "card-content">
+                    <div class="form-field">
+                        <label for="username">Create Username (until 15 characters only)</label>
+                        <input type="text" maxlength=15 name="username"></input>
+
+                    </div>
+
+                    <div class="form-field">
+                            <label for="password">Create Password</label>
+                            <input type="password" minlength=8 name="password"></input>
+    
+                    </div>
+
+                    <div class="form-field">
+                            <label for="phone">Enter Phone No.</label>
+                            <input type="number" name="phone"></input>
+    
+                    </div>
+
+                    <div class="form-field">
+                            <label for="city">Enter City of Residence</label>
+                            <input type="text"
+                            name="city"></input>
+    
+                    </div>
+
+                    <div class="form-field">
+                            <label for="som">Enter Money in Account</label>
+                            <input type="number"
+                            name="som"></input>
+    
+                    </div>
+
+                    <br><br><br>
+                    <div class="form-field">
+                         
+                         <input type="submit" class="btn-small waves-effect waves-light grey-darken-3" value="submit" formaction="/signup/"></input>
+                    </div>    
+                    <p align="center-align"> Already have an account? <a href="/login/">Login here.</a></p>    
+                
+
+        
+            </div>
+
+        </div>
+    </div>
+    </div>
+    
+</body>
