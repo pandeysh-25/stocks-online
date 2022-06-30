@@ -13,10 +13,4 @@ The intention behind StocksOnline is to provide people with little to no knowled
 
 Python, Django and MySQL were used in this project. 
 
-Flow diagram:
 
-![My animated logo](images/flowdiag.png)
-
-ER diagram:
-
-![My animated logo](images/erdiag.png)
